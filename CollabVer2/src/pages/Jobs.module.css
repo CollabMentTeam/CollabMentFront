@@ -1,0 +1,60 @@
+.frameGroup {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: var(--gap-base);
+  max-width: 100%;
+}
+.frameGroup,
+.frameParent,
+.jobs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.frameParent {
+  width: 713px;
+  align-items: flex-start;
+  gap: var(--gap-6xl);
+  max-width: 100%;
+}
+.jobs {
+  width: 100%;
+  position: relative;
+  background-color: #f5f7fa;
+  overflow: hidden;
+  align-items: center;
+  padding: 140px var(--padding-xl) 247px;
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+  letter-spacing: normal;
+}
+
+.jobsParent {
+  width: auto;
+  height: auto;
+}
+
+
+.createBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.createBtn:hover {
+  background-color: #0056b3;
+}
+
+.containerForCreate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  margin-top: 20px;
+}
