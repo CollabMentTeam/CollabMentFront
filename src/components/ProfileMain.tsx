@@ -3,7 +3,7 @@ import AdditionalDetails from "./AdditionalDetails";
 import styles from "./ProfileMain.module.css";
 import { Link, redirect, useNavigation } from 'react-router-dom';
 import axios from "axios";
-
+import { PostList } from "../pages/Feed";
 
 const API_URL = 'https://collabmentteam.pythonanywhere.com/api/user/profile';
 const Url = 'https://collabmentteam.pythonanywhere.com/';
@@ -32,14 +32,43 @@ interface guestUserProps {
   username: string;
 }
 
+const UrlToGetPosts = 'https://collabmentteam.pythonanywhere.com/api/posts/user/'
+
 const AyaGazizova: FunctionComponent<guestUserProps> = ({ username }) => {
 
+  const [posts, setPosts] = useState([]);
+  const [viewsCount, setViewsCount] = useState(null);
 
+  const fetchViewsCount = async () => {
+    try {
+        const response = await axios.get(UrlToView + `/profile/views/count/${username}/`);
+        setViewsCount(response.data.profile_views_count);
+    } catch (error) {
+        console.error('Error fetching profile views count:', error);
+    }
+};
+
+  const fetchPosts = async () => {
+
+    fetch(UrlToGetPosts + username + '/')
+    .then(response => response.json())
+    .then(data => {
+      if (Array.isArray(data.results)) {
+        setPosts(data.results);
+      } else {
+        setPosts([]);
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching posts:', error);
+    });
+  };
 
   const [userData, setUserData] = useState<UserData | null>(null);
+  const [userPofileData, setUserPofileData] = useState<ProfileData | null>(null);
+
   const [error, setError] = useState<string | null>(null);
 
-  const [userPofileData, setUserPofileData] = useState<userPofileData | null>(null);
   const viewerUsername = localStorage.getItem('username'); 
 
   useEffect(() => {
@@ -57,6 +86,8 @@ const AyaGazizova: FunctionComponent<guestUserProps> = ({ username }) => {
       }
   };
   increaseProfileView();
+  fetchPosts();
+  fetchViewsCount();
 
 }, [username]);
 
@@ -197,11 +228,18 @@ if (!userData) {
                         <div className={styles.footerNavigationRectangleSe}>
                           <h3 className={styles.following}>
                             <span>
-                              <b>0</b>
+                            <b>{userPofileData?.user.friends.length}</b>
                             </span>
                             <span className={styles.following1}>
                               <span>{` `}</span>
-                              <span>Friends</span>
+                              <span>Subscribers      </span>
+                            </span>
+                            <span>
+                            <b>{viewsCount}</b>
+                            </span>
+                            <span className={styles.following1}>
+                              <span>{` `}</span>
+                              <span>Views</span>
                             </span>
                           </h3>
                           <h3 className={styles.followers}>
@@ -267,7 +305,7 @@ if (!userData) {
               languages="Languages"
               kazakhEnglishRussian="Kazakh, English, Russian "
             />
-            <AdditionalDetails
+            {/* <AdditionalDetails
               additionalDetails="Social Links"
               icon="/icon-51.svg"
               email="Instagram"
@@ -282,13 +320,56 @@ if (!userData) {
               propColor="#4640de"
               propColor1="#4640de"
               propColor2="#4640de"
-            />
+            /> */}
           </div>
         </div>
         
+        <PostList posts={posts} widthSize="68%"/>
+
       </div>
     </section>
   );
 };
+
+
+interface ProfileData {
+  professional_field: string;
+  education: string;
+  current_job: string;
+  experience: string;
+  location: string;
+  personal_qualities: string;
+  certificates: string;
+  resume: string;
+  profile_photo: string;
+  education_date: string;
+  name_institution: string;
+  desired_position: string;
+  type_of_work: string;
+  operating_mode: string;
+  name_organization: string;
+  position: string;
+  experience_name: string;
+  citizenship: string;
+  city: string;
+  passage_time: string;
+  user: User;
+}
+
+interface User {
+  id: number;
+  username: string;
+  email: string;
+  phone_number: string;
+  friends: Friends[];
+}
+
+interface Friends {
+  id: number;
+  username: string;
+  email: string;
+  phone_number: string;
+  friends: string[];
+}
 
 export default AyaGazizova;

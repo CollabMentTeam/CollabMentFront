@@ -31,7 +31,6 @@ const GroupComponent2: FunctionComponent<GroupComponent2Props> = ({ job }) => {
         if (!response.ok) {
             throw new Error('Ошибка при отправке отклика на вакансию');
         }
-
         setApplied(true);
     } catch (error) {
         console.error('Ошибка:', error);

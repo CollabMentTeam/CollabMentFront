@@ -1,11 +1,11 @@
 import { FunctionComponent } from "react";
 import Navigation1 from "../components/Navigation1";
-import AyaGazizova from "../components/ProfileMain";
-import FooterV2 from "../components/FooterV2";
+import Footer from "../components/Footer";
 import styles from "./ProfilePage.module.css";
 import { useParams } from "react-router-dom"; 
+import ProfilePageAbout from "./ProfilePageAbout";
 
-const ProfilePage: FunctionComponent = () => {
+const ProfilePageContainer: FunctionComponent = () => {
 
   const { username } = useParams<{ username: string }>();
 
@@ -18,12 +18,12 @@ const ProfilePage: FunctionComponent = () => {
       </div>
       <main className={styles.group}>
         <Navigation1 />
-        <AyaGazizova username={username || ''} />
+        <ProfilePageAbout username={username || ''} />
       </main>
       <div className={styles.profilePageChild} />
-      <FooterV2 />
+      <Footer />
     </div>
   );
 };
 
-export default ProfilePage;
+export default ProfilePageContainer;

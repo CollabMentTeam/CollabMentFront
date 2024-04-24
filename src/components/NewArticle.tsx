@@ -75,10 +75,11 @@ const NewArticle: FunctionComponent = () => {
             <div className={styles.freelanceUxuiDesignerContainer}>
               <p
                 className={styles.freelanceUxuiDesigner}
-              >{`Freelance UX/UI designer, 80+ projects `}</p>
+              >{userData?.user_type} </p>
               <p
                 className={styles.inWebDesign}
-              >{`in web design, mobile apps (iOS & android) and creative projects. Open to offers.`}</p>
+              >{userData?.gender}</p>
+              <p>{userData?.phone_number}</p>
             </div>
           </div>
         </div>
@@ -90,7 +91,7 @@ const NewArticle: FunctionComponent = () => {
           <div className={styles.writeNewArticle}>write new article</div>
         </button>
       </div>
-      <div className={styles.myGroups}>
+      {/* <div className={styles.myGroups}>
         <div className={styles.myGroupsChild} />
         <div className={styles.myGroupsFrame}>
           <div className={styles.editListFrame}>
@@ -146,8 +147,8 @@ const NewArticle: FunctionComponent = () => {
           </div>
         </div>
         <div className={styles.showAll8}>Show all (8)</div>
-      </div>
-      <div className={styles.hashtags}>
+      </div> */}
+      {/* <div className={styles.hashtags}>
         <div className={styles.hashtagsChild} />
         <div className={styles.hashtagCloud}>
           <div className={styles.followedHashtags}>Followed hashtags</div>
@@ -201,8 +202,8 @@ const NewArticle: FunctionComponent = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className={styles.articles}>
+      </div> */}
+      {/* <div className={styles.articles}>
         <div className={styles.articlesChild} />
         <div className={styles.trendingArticlesWrapper}>
           <div className={styles.trendingArticles}>Trending articles</div>
@@ -257,7 +258,7 @@ const NewArticle: FunctionComponent = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

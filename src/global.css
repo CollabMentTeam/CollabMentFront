@@ -107,6 +107,7 @@ body {
   --color-gray-300: rgba(0, 0, 0, 0.4);
   --color-gray-400: rgba(0, 0, 0, 0.6);
   --color-darkslategray-100: #393c40;
+  --color-darkslategray-400: #3b3b3b;
   --neutrals-100: #25324b;
   --color-darkslategray-300: #313131;
   --color-darkslategray-200: rgba(37, 50, 75, 0.5);
@@ -263,9 +264,13 @@ body {
   --gap-62xl: 81px;
   --gap-18xl-7: 37.7px;
   --gap-9xs-3: 3.3px;
+  --gap-mini-5: 14.5px;
+  --gap-7xs-9: 5.9px;
+  --gap-6xs-8: 6.8px;
 
   /* Paddings */
   --padding-xl: 20px;
+  --padding-421xl: 440px;
   --padding-14xl: 33px;
   --padding-5xl: 24px;
   --padding-11xl: 30px;
@@ -393,6 +398,8 @@ body {
   --br-4xs: 9px;
   --br-smi: 13px;
   --br-mini-8: 14.8px;
+  --br-base-5: 15.5px;
+  --br-xs-6: 11.6px;
 
   /* Effects */
   --cards-short-default: 0px 5px 16px rgba(8, 15, 52, 0.06);

@@ -1,7 +1,7 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import ITUniversityLogo from "../components/ITUniversityLogo";
 import NewArticle from "../components/NewArticle";
-import Footer3 from "../components/Footer3";
+import FooterV2 from "../components/FooterV2";
 import styles from "./Feed.module.css";
 import Navigation1 from "../components/Navigation1";
 import { Link } from "react-router-dom";
@@ -201,7 +201,7 @@ const Feed: FunctionComponent = () => {
               </div>
             </div>
 
-            <PostList posts={posts} />
+            <PostList posts={posts} widthSize={"100%"}/>
 
             {/* <div className={styles.div}> */}
 
@@ -291,7 +291,7 @@ const Feed: FunctionComponent = () => {
           <NewArticle />
         </div>
       </section>
-      <Footer3 />
+      <FooterV2 />
     </div>
     </div>
   );
@@ -310,16 +310,17 @@ interface Post {
 
 interface PostListProps {
   posts: Post[];
+  widthSize?: string;
 }
 
-const PostList: React.FC<PostListProps> = ({ posts }) => {
+export const PostList: React.FC<PostListProps> = ({ posts , widthSize }) => {
   console.log(posts);
   if (!Array.isArray(posts)) {
     return <p>No posts available</p>;
   }
 
   return (
-    <div style={{width: "100%"}}>
+    <div style={{width: widthSize}}>
       {posts.map(post => (
         <div className={styles.div} style={{marginBottom: "20px" , paddingBottom: "20px"}}>
         <div className={styles.frameGroup} key={post.id} style={{width: "100%"}}>

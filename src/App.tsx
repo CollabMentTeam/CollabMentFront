@@ -27,6 +27,8 @@ import AppVideo from "./AppVideo";
 import Jobs from "./pages/Jobs";
 import V from "./pages/V";
 import CreateJobForm from "./pages/createVacancy";
+import ProfilePageContainer from "./pages/ProfileAboutContainer";
+import TeamNew from "./pages/TeamNew";
 
 function App() {
   const action = useNavigationType();
@@ -132,7 +134,7 @@ function App() {
       <Route path="/network" element={<Network />} />
       <Route path="/notices" element={<Notices />} />
       <Route path="/feed" element={<Feed />} />
-      <Route path="/profileAbout/:username" element={<ProfilePageAbout />} />
+      <Route path="/profileAbout/:username" element={<ProfilePageContainer />} />
       <Route path="/feedshort" element={<FeedShort />} />
       <Route
         path="/MyProfile"
@@ -156,6 +158,8 @@ function App() {
       {/* <Route path="/example-form" element={<ExampleForm />} /> */}
 
       <Route path="/vacancy" element={<V />} />
+
+      <Route path="/teamNew" element={<TeamNew />} />
 
       <Route path="/create-vacancy" element={<CreateJobForm />} />
 

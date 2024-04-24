@@ -263,10 +263,10 @@ const DashboardSettingsAccount1: FunctionComponent = () => {
                 
               </div>
               </Link>
-              <Link className={stylesAnimation.NavLinkSettings} to="/login-details">
+              {/* <Link className={stylesAnimation.NavLinkSettings} to="/login-details">
 
               <div className={styles.loginDetails}>Login Details</div>
-              </Link>
+              </Link> */}
               <div className={styles.tabMenu2}>
                 <div className={styles.caption1}>Notifications</div>
               </div>
