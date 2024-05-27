@@ -18,7 +18,7 @@ const GroupComponent2: React.FC<GroupComponent2Props> = ({ key, job, className }
             throw new Error('Имя пользователя не найдено в localStorage');
         }
 
-        const response = await fetch('http://127.0.0.1:8000/api/job-applications/', {
+        const response = await fetch('https://collabmentteam.pythonanywhere.com/api/job-applications/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

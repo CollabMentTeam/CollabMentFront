@@ -23,7 +23,7 @@ const Team: FunctionComponent = () => {
         // Функция для получения списка команд из API
         const fetchTeams = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/teams/list/');
+                const response = await axios.get('https://collabmentteam.pythonanywhere.com/api/teams/list/');
                 setTeams(response.data);
                 console.log(response.data);
             } catch (error) {

@@ -17,8 +17,8 @@ interface Notification {
 }
 
 
-const API_URL = 'http://127.0.0.1:8000/api/user/profile';
-const Url = 'http://127.0.0.1:8000/';
+const API_URL = 'https://collabmentteam.pythonanywhere.com/api/user/profile';
+const Url = 'https://collabmentteam.pythonanywhere.com/';
 
 const Navigation1: FunctionComponent = () => {
 
@@ -66,7 +66,7 @@ const Navigation1: FunctionComponent = () => {
 
   const handleDelete = async (id:any) => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/notifications/${id}/`, {
+      const response = await fetch(`https://collabmentteam.pythonanywhere.com/api/notifications/${id}/`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const Navigation1: FunctionComponent = () => {
           return;
         }
     
-        const response = await fetch(`http://127.0.0.1:8000/api/notifications/?username=${username}`, {
+        const response = await fetch(`https://collabmentteam.pythonanywhere.com/api/notifications/?username=${username}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'

@@ -13,7 +13,7 @@ const ManagerPhotoGrid = ({ className = "", friend}) => {
                 <img
                     className={styles.photoIcon}
                     alt={`${friend.username}'s profile`}
-                    src={`http://127.0.0.1:8000/` + friend.profile.profile_photo}
+                    src={`https://collabmentteam.pythonanywhere.com/` + friend.profile.profile_photo}
                 />
             )}
         

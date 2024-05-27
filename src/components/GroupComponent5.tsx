@@ -1,7 +1,7 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import styles from "./GroupComponent5.module.css";
 
-const API_URL = 'http://127.0.0.1:8000/api/user/profile';
+const API_URL = 'https://collabmentteam.pythonanywhere.com/api/user/profile';
 
 interface userData {
   id: number;

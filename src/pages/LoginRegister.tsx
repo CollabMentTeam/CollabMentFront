@@ -4,7 +4,7 @@ import stylesAnimation from "../components/globalAnimations.module.css";
 import axios from "axios";
 import { Link, redirect  } from "react-router-dom";
 
-const API_URL = 'http://127.0.0.1:8000/api/login';
+const API_URL = 'https://collabmentteam.pythonanywhere.com/api/login';
 
 const LoginRegister: FunctionComponent = () => {
   

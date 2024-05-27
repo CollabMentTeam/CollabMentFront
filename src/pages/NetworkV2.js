@@ -16,7 +16,7 @@ const Network = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/all_users/');
+        const response = await axios.get('https://collabmentteam.pythonanywhere.com/api/all_users/');
         setUsers(response.data);
         setLoading(false);
       } catch (error) {
@@ -26,7 +26,7 @@ const Network = () => {
 
     const fetchFriends = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/friend/list/${viewerUsername}/`);
+        const response = await axios.get(`https://collabmentteam.pythonanywhere.com/api/friend/list/${viewerUsername}/`);
         setFriends(response.data);
       } catch (error) {
         console.error('Error fetching friends:', error);
@@ -39,7 +39,7 @@ const Network = () => {
 
   const addFriend = async (friendUsername) => {
     try {
-      await axios.post('http://127.0.0.1:8000/api/friend/add/', {
+      await axios.post('https://collabmentteam.pythonanywhere.comapi/friend/add/', {
         friend_username: friendUsername,
         username: viewerUsername
       });
@@ -52,7 +52,7 @@ const Network = () => {
 
   const sendNotifications = async (members) => {
     try {
-      await fetch('http://127.0.0.1:8000/api/create-notification/', {
+      await fetch('https://collabmentteam.pythonanywhere.com/api/create-notification/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

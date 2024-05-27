@@ -17,7 +17,7 @@ const Jobs: FunctionComponent = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/jobs/');
+        const response = await fetch('https://collabmentteam.pythonanywhere.com/api/jobs/');
         const data = await response.json();
         setJobs(data);
         console.log(data);

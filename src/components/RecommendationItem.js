@@ -26,7 +26,7 @@ const RecommendationItem = ({ className = "" ,  users, addFriend }) => {
                   className={styles.photoIcon}
                   loading="lazy"
                   alt=""
-                  src={`http://127.0.0.1:8000/` + user.profile.profile_photo}
+                  src={`https://collabmentteam.pythonanywhere.com/` + user.profile.profile_photo}
                 />
 
               )}

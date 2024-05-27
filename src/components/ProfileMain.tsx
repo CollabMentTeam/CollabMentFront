@@ -6,10 +6,10 @@ import axios from "axios";
 import { PostList } from "../pages/Feed";
 import FrameProf from "./FrameProf"
 
-const API_URL = 'http://127.0.0.1:8000/api/user/profile';
-const Url = 'http://127.0.0.1:8000/';
+const API_URL = 'https://collabmentteam.pythonanywhere.com/api/user/profile';
+const Url = 'https://collabmentteam.pythonanywhere.com/';
 
-const UrlToView = 'http://127.0.0.1:8000/api'
+const UrlToView = 'https://collabmentteam.pythonanywhere.com/api'
 
 interface UserData {
   username: string;
