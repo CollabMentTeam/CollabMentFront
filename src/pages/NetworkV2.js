@@ -39,7 +39,7 @@ const Network = () => {
 
   const addFriend = async (friendUsername) => {
     try {
-      await axios.post('https://collabmentteam.pythonanywhere.comapi/friend/add/', {
+      await axios.post('https://collabmentteam.pythonanywhere.com/api/friend/add/', {
         friend_username: friendUsername,
         username: viewerUsername
       });
