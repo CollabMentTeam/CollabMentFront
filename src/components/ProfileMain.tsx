@@ -38,37 +38,10 @@ interface guestUserProps {
 
 const UrlToGetPosts = 'https://collabmentteam.pythonanywhere.com/api/posts/user/'
 
-const UrlToGetPosts = 'https://collabmentteam.pythonanywhere.com/api/posts/user/'
 
 const AyaGazizova: FunctionComponent<guestUserProps> = ({ username }) => {
 
-  const [posts, setPosts] = useState([]);
-  const [viewsCount, setViewsCount] = useState(null);
-
-  const fetchViewsCount = async () => {
-    try {
-        const response = await axios.get(UrlToView + `/profile/views/count/${username}/`);
-        setViewsCount(response.data.profile_views_count);
-    } catch (error) {
-        console.error('Error fetching profile views count:', error);
-    }
-};
-
-  const fetchPosts = async () => {
-
-    fetch(UrlToGetPosts + username + '/')
-    .then(response => response.json())
-    .then(data => {
-      if (Array.isArray(data.results)) {
-        setPosts(data.results);
-      } else {
-        setPosts([]);
-      }
-    })
-    .catch(error => {
-      console.error('Error fetching posts:', error);
-    });
-  };
+  
   const [posts, setPosts] = useState([]);
   const [viewsCount, setViewsCount] = useState(null);
 
@@ -100,7 +73,6 @@ const AyaGazizova: FunctionComponent<guestUserProps> = ({ username }) => {
   const [userData, setUserData] = useState<UserData | null>(null);
   const [userPofileData, setUserPofileData] = useState<ProfileData | null>(null);
 
-  const [userPofileData, setUserPofileData] = useState<ProfileData | null>(null);
 
   const [error, setError] = useState<string | null>(null);
 
@@ -393,7 +365,6 @@ if (!userData) {
               propColor="#4640de"
               propColor1="#4640de"
               propColor2="#4640de"
-            /> */}
             /> */}
           </div>
         </div>
