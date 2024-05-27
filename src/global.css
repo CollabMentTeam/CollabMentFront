@@ -117,6 +117,7 @@ body {
   --color-gray-400: rgba(0, 0, 0, 0.6);
   --color-darkslategray-100: #393c40;
   --color-darkslategray-400: #3b3b3b;
+  --color-darkslategray-400: #3b3b3b;
   --neutrals-100: #25324b;
   --color-darkslategray-300: #313131;
   --color-darkslategray-200: rgba(37, 50, 75, 0.5);
@@ -308,6 +309,7 @@ body {
 
   /* Paddings */
   --padding-xl: 20px;
+  --padding-421xl: 440px;
   --padding-421xl: 440px;
   --padding-14xl: 33px;
   --padding-5xl: 24px;

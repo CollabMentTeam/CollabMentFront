@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import FooterInstance from "../components/FooterInstance";
-import Footer5 from "../components/Footer5";
+import FooterV2 from "../components/FooterV2";
 import styles from "./Chat.module.css";
 import Navigation1 from "../components/Navigation1";
 
@@ -14,7 +14,7 @@ const Chat: FunctionComponent = () => {
         <div className={styles.sidebar} />
       </div>
       <FooterInstance />
-      <Footer5 />
+      <FooterV2 />
     </div>
     </div>
   );
