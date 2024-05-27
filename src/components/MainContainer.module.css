@@ -1,0 +1,164 @@
+.frameChild {
+  height: 145.2px;
+  width: 337px;
+  position: relative;
+  border-radius: 17.74px;
+  background-color: var(--color-white);
+  display: none;
+  max-width: 100%;
+}
+.frameItem {
+  align-self: stretch;
+  width: 10px;
+  position: relative;
+  border-radius: 17.74px 0 0 17.74px;
+  background-color: #0085ff;
+  z-index: 1;
+}
+.note,
+.responseToThe {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.note {
+  width: 58.8px;
+  font-weight: 600;
+}
+.responseToThe {
+  margin-right: -3.2000000000043656px;
+  width: 212.8px;
+  flex-shrink: 0;
+  debug_commit: bf4bc93;
+}
+.userInputField {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+}
+.userid {
+  width: 77.6px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  debug_commit: bf4bc93;
+  z-index: 1;
+}
+.responseArea {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.learnMore {
+  position: relative;
+  font-size: var(--font-size-base-5);
+  font-weight: 500;
+  font-family: var(--font-dm-sans);
+  color: var(--color-mediumslateblue);
+  text-align: left;
+  display: inline-block;
+  min-width: 83px;
+  white-space: nowrap;
+}
+.callToAction,
+.learnMoreLink {
+  display: flex;
+  justify-content: flex-start;
+}
+.learnMoreLink {
+  cursor: pointer;
+  border: 1.1px solid var(--color-mediumslateblue);
+  padding: var(--padding-xs) var(--padding-smi) 11px var(--padding-sm);
+  background-color: transparent;
+  border-radius: 12.89px;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: flex-start;
+  z-index: 1;
+}
+.learnMoreLink:hover {
+  background-color: var(--color-mediumslateblue);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+  .learnMore {
+    color: white;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+  }
+}
+
+.callToAction {
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 19.9px;
+}
+.frameWrapper,
+.noteParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.noteParent {
+  align-self: stretch;
+  justify-content: flex-start;
+  gap: 8.9px;
+}
+.frameWrapper {
+  flex: 1;
+  justify-content: flex-end;
+  padding: 0 0 9.9px;
+}
+.mainContainer,
+.rectangleParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.rectangleParent {
+  height: 165.2px;
+  flex: 1;
+  border-radius: 17.74px;
+  background-color: var(--color-white);
+  align-items: flex-end;
+  padding: var(--padding-10xs-2) var(--padding-mid) var(--padding-10xs-2) 0;
+  box-sizing: border-box;
+  gap: 22.1px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-base-6);
+  color: var(--color-darkslategray-300);
+  font-family: var(--font-inter);
+}
+.mainContainer {
+  width: 337px;
+  align-items: flex-start;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 10px;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-top: -80px;
+}
+
+.deleteText {
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ff0000; 
+}
+
+.deleteButton:hover .deleteText {
+  color: white;
+  background-color: #0085ff;
+  border-radius: 6px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+}

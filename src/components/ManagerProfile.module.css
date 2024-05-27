@@ -1,0 +1,76 @@
+.managerProfileChild,
+.subscriptionHeaderChild {
+  width: 819px;
+  height: 551px;
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  display: none;
+}
+.subscriptionHeaderChild {
+  height: 50px;
+  width: 240px;
+  border-radius: var(--br-base);
+  background-color: var(--color-lightsalmon);
+}
+.mySubscriptions {
+  position: relative;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: center;
+  display: inline-block;
+  min-width: 119px;
+  z-index: 1;
+}
+.managerProfile,
+.subscriptionHeader,
+.subscriptions {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.subscriptionHeader {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-lgi) var(--padding-37xl) var(--padding-base);
+  background-color: var(--color-lightsalmon);
+  flex: 1;
+  border-radius: var(--br-base);
+  white-space: nowrap;
+  z-index: 1;
+}
+.subscriptionHeader:hover {
+  background-color: var(--color-sienna);
+}
+.managerProfile,
+.subscriptions {
+  width: 240px;
+  padding: 0 0 var(--padding-mid);
+  box-sizing: border-box;
+}
+.managerProfile {
+  width: 819px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  overflow-x: auto;
+  flex-direction: column;
+  padding: var(--padding-18xl) var(--padding-14xl) var(--padding-8xl)
+    var(--padding-21xl);
+  gap: var(--gap-3xs);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-200);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 800px) {
+  .managerProfile {
+    padding-top: var(--padding-5xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

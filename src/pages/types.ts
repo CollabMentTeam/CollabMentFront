@@ -1,6 +1,7 @@
 // types.ts
 
 export interface Job {
+    applications_count: number;
     id: number;
     position: string;
     company_name: string;

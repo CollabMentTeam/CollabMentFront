@@ -1,7 +1,7 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import styles from "./Navigation1.module.css";
 import stylesAnimation from "../components/globalAnimations.module.css";
-
+import MainContainer from "./MainContainer";
 
 import { Link } from 'react-router-dom';
 
@@ -17,8 +17,8 @@ interface Notification {
 }
 
 
-const API_URL = 'https://collabmentteam.pythonanywhere.com/api/user/profile';
-const Url = 'https://collabmentteam.pythonanywhere.com/';
+const API_URL = 'http://127.0.0.1:8000/api/user/profile';
+const Url = 'http://127.0.0.1:8000/';
 
 const Navigation1: FunctionComponent = () => {
 
@@ -64,6 +64,27 @@ const Navigation1: FunctionComponent = () => {
     setShowNotifications(true);
   };
 
+  const handleDelete = async (id:any) => {
+    try {
+      const response = await fetch(`http://127.0.0.1:8000/api/notifications/${id}/`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      if (response.ok) {
+        setNotifications(prevNotifications =>
+          prevNotifications.filter(notification => notification.id !== id)
+        );
+      } else {
+        console.error('Failed to delete the notification');
+      }
+    } catch (error) {
+      console.error('An error occurred while deleting the notification', error);
+    }
+  };
+  
+
 
     // Получение уведомлений пользователя из вашего API
     const fetchNotifications = async () => {
@@ -76,7 +97,7 @@ const Navigation1: FunctionComponent = () => {
           return;
         }
     
-        const response = await fetch(`https://collabmentteam.pythonanywhere.com/api/notifications/?username=${username}`, {
+        const response = await fetch(`http://127.0.0.1:8000/api/notifications/?username=${username}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -365,15 +386,20 @@ const Navigation1: FunctionComponent = () => {
         <div className={styles.modalOverlay} onClick={() => setShowNotifications(false)}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <button className={styles.closeButton} onClick={() => setShowNotifications(false)}>X</button>
-            <h2>Уведомления</h2>
-            <ul className={styles.notificationList}>
+            {/* <h2>Уведомления</h2> */}
+            {notifications.map(notification => (
+              <MainContainer message={notification.message} link={notification.link} onDelete={() => handleDelete(notification.id)} key={notification.id}
+            
+              />
+              ))}
+            {/* <ul className={styles.notificationList}>
               {notifications.map(notification => (
                 <li key={notification.id} className={styles.notificationItem}>
                   <p>{notification.message}</p>
                   {notification.link && <a href={notification.link}>Перейти</a>}
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
         </div>
       )}

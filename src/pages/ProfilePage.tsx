@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import Navigation1 from "../components/Navigation1";
 import AyaGazizova from "../components/ProfileMain";
-import Footer from "../components/Footer";
+import FooterV2 from "../components/FooterV2";
 import styles from "./ProfilePage.module.css";
 import { useParams } from "react-router-dom"; 
 
@@ -21,7 +21,7 @@ const ProfilePage: FunctionComponent = () => {
         <AyaGazizova username={username || ''} />
       </main>
       <div className={styles.profilePageChild} />
-      <Footer />
+      <FooterV2 />
     </div>
   );
 };

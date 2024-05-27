@@ -9,6 +9,8 @@ import SyndicatesInfo from "../components/SyndicatesInfo";
 import FrameComponent from "../components/FrameComponent";
 import FooterForMain from "../components/FooterForMain";
 import styles from "./MainPage.module.css";
+import Footer from "../components/FooterV2";
+import Homepage from "../components/Homepage";
 
 const MainPage: FunctionComponent = () => {
   return (
@@ -99,6 +101,7 @@ const MainPage: FunctionComponent = () => {
         <RollingFundsFeesBreakdownT />
         <Banking />
         <HeaderSection />
+        <Homepage/>
         <div className={styles.text}>
           <div className={styles.frameParent}>
             <div className={styles.frameGroup}>
@@ -221,9 +224,10 @@ const MainPage: FunctionComponent = () => {
             </div>
           </div>
         </div>
+        
         <SyndicatesInfo />
       </section>
-      <div className={styles.aboutusLink}>
+      {/* <div className={styles.aboutusLink}>
         <div className={styles.careersLink}>
           <div className={styles.careersLinkChild} />
           <div className={styles.welcomeToCollabmentContainer}>
@@ -237,8 +241,8 @@ const MainPage: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <FrameComponent />
-      <FooterForMain />
+      <FrameComponent /> */}
+      <Footer />
     </div>
   );
 };

@@ -20,6 +20,7 @@ import DropDownSpeaker from "../DropDownSpeaker";
 import NetworkStats from "../NetworkStats";
 import { useMeetingAppContext } from "../../MeetingAppContextDef";
 import { toast } from "react-toastify";
+import Navigation1 from "../Navigation1";
 
 export function JoiningScreen({
   participantName,
@@ -358,8 +359,10 @@ export function JoiningScreen({
   };
 
   return (
+    <>
+    <Navigation1/>
     <div className="fixed inset-0">
-      <div className="overflow-y-auto flex flex-col flex-1 h-screen bg-gray-800">
+      <div className="overflow-y-auto flex flex-col flex-1 h-screen bg-gray-100">
         <div className="flex flex-1 flex-col md:flex-row items-center justify-center md:m-[72px] m-16">
           <div className="container grid  md:grid-flow-col grid-flow-row ">
             <div className="grid grid-cols-12">
@@ -522,5 +525,6 @@ export function JoiningScreen({
         subTitle="Please connect a mic and webcam to speak and share your video in the meeting. You can also join without them."
       />
     </div>
+    </>
   );
 }

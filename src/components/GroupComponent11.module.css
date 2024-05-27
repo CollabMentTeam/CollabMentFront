@@ -1,0 +1,170 @@
+.frameChild {
+  width: 757px;
+  height: 245px;
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-lightsalmon);
+  display: none;
+  max-width: 100%;
+}
+.applyForThe,
+.findYourDream {
+  margin: 0;
+  position: relative;
+  line-height: 150%;
+  font-family: inherit;
+  z-index: 1;
+}
+.findYourDream {
+  align-self: stretch;
+  font-size: inherit;
+  font-weight: 700;
+}
+.applyForThe {
+  width: 653px;
+  font-size: var(--display-2-size);
+  font-weight: 400;
+  display: inline-block;
+  max-width: 100%;
+}
+.connectionPoint,
+.parentContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.parentContainer {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-12xs);
+}
+.connectionPoint {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 0 var(--padding-12xs);
+  box-sizing: border-box;
+}
+.frameIcon,
+.searchJob {
+  position: relative;
+  flex-shrink: 0;
+  debug_commit: 1de1738;
+}
+.frameIcon {
+  height: 29.6px;
+  width: 29.6px;
+  overflow: hidden;
+  min-height: 30px;
+}
+.searchJob {
+  display: inline-block;
+  min-width: 102px;
+  white-space: nowrap;
+}
+.searchJobWrapper {
+  flex-direction: column;
+  padding: var(--padding-11xs-9) 0 0;
+}
+.frameGroup,
+.frameWrapper,
+.searchJobWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameGroup {
+  flex-direction: row;
+  gap: var(--gap-mini-8);
+}
+.frameWrapper {
+  flex-direction: column;
+  padding: var(--padding-sm-7) 0 0;
+}
+.search {
+  position: relative;
+  font-size: var(--font-size-lgi-7);
+  font-weight: 500;
+  font-family: var(--other-16-18-m);
+  color: var(--neutral-100);
+  text-align: left;
+  display: inline-block;
+  min-width: 65px;
+}
+.searchWrapper {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-base) var(--padding-6xl-9) 15.9px;
+  background-color: var(--color-mediumslateblue);
+  border-radius: 14.79px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.searchWrapper:hover {
+  background-color: var(--color-royalblue-100);
+}
+.frameParent,
+.rectangleParent {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frameParent {
+  width: 695px;
+  border-radius: 14.79px;
+  background-color: var(--neutral-100);
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--padding-7xs) var(--padding-6xs-7) var(--padding-7xs-1)
+    var(--padding-5xl-6);
+  top: 0;
+  z-index: 2;
+  position: sticky;
+  gap: var(--gap-xl);
+  font-size: var(--font-size-lgi-7);
+  color: var(--color-gray-1400);
+  font-family: var(--other-16-18-m);
+}
+.rectangleParent {
+  flex: 1;
+  border-radius: var(--br-xl);
+  background-color: var(--color-lightsalmon);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-21xl) var(--padding-xs) var(--padding-14xl)
+    var(--padding-14xl);
+  gap: var(--gap-8xl);
+  text-align: left;
+  font-size: var(--font-size-11xl);
+  color: var(--neutral-100);
+  font-family: var(--body-small-medium);
+}
+@media screen and (max-width: 975px) {
+  .findYourDream {
+    font-size: var(--font-size-5xl);
+    line-height: 36px;
+  }
+  .parentContainer {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 700px) {
+  .rectangleParent {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .findYourDream {
+    font-size: var(--body-large-semibold-size);
+    line-height: 27px;
+  }
+  .applyForThe {
+    font-size: var(--other-16-18-m-size);
+    line-height: 24px;
+  }
+}

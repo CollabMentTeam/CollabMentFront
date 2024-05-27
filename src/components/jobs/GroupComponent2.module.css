@@ -165,7 +165,7 @@
   font-weight: 500;
   display: inline-block;
   min-width: 76px;
-  width: 600px; /* ----------------------------------------*/
+  width: 500px; /* ----------------------------------------*/
   z-index: 1;
 
 }
@@ -422,6 +422,7 @@
   text-align: left;
   display: inline-block;
   min-width: 82px;
+  margin-left: 10px;
 }
 .locationMarker,
 .verticalDivider {

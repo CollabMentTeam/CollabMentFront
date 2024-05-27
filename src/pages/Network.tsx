@@ -3,7 +3,7 @@ import Items from "../components/Items";
 import Profile from "../components/Profile";
 import Other from "../components/Other";
 import Photo from "../components/Photo";
-import Footer1 from "../components/Footer1";
+import FooterV2 from "../components/FooterV2";
 import styles from "./Network.module.css";
 import Navigation1 from "../components/Navigation1";
 
@@ -20,7 +20,7 @@ const Network: FunctionComponent = () => {
       </div>
     
       <Photo />
-      <Footer1 />
+      <FooterV2 />
     </div>
     </div>
   );

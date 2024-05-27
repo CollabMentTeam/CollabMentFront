@@ -1,0 +1,45 @@
+.shapeContainerIcon {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: contain;
+  position: absolute;
+  left: -4px;
+  top: 3px;
+  transform: scale(1.106);
+}
+.wrapperShapeContainer {
+  position: absolute;
+  top: 55px;
+  left: 157px;
+  border-radius: 55px;
+  width: 116px;
+  height: 120px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+.wrapperShapeContainerParent {
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 90px;
+  width: 449px;
+  height: 230px;
+}
+.additionalDetailsParent {
+  width: 542px;
+  height: 335px;
+  max-width: 100%;
+  line-height: normal;
+  letter-spacing: normal;
+}

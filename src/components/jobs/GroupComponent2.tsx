@@ -3,10 +3,11 @@ import styles from "./GroupComponent2.module.css";
 import { Job } from "../../pages/types";
 
 interface GroupComponent2Props {
+  key: number;
   job: Job;
+  className?: string; // Добавляется как опциональное свойство
 }
-
-const GroupComponent2: FunctionComponent<GroupComponent2Props> = ({ job }) => {
+const GroupComponent2: React.FC<GroupComponent2Props> = ({ key, job, className }) => {
 
   const [applied, setApplied] = useState(false);
 
@@ -17,7 +18,7 @@ const GroupComponent2: FunctionComponent<GroupComponent2Props> = ({ job }) => {
             throw new Error('Имя пользователя не найдено в localStorage');
         }
 
-        const response = await fetch('https://collabmentteam.pythonanywhere.com/api/job-applications/', {
+        const response = await fetch('http://127.0.0.1:8000/api/job-applications/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -31,7 +32,6 @@ const GroupComponent2: FunctionComponent<GroupComponent2Props> = ({ job }) => {
         if (!response.ok) {
             throw new Error('Ошибка при отправке отклика на вакансию');
         }
-
         setApplied(true);
     } catch (error) {
         console.error('Ошибка:', error);
@@ -182,7 +182,7 @@ const sendNotifications = async (members: any) => {
                     />
                   </div>
                   <div className={styles.appliedLabel}>
-                    <div className={styles.div}>21</div>
+                    <div className={styles.div}>{job.applications_count}</div>
                   </div>
                   <div className={styles.appliedWrapper}>
                     <div className={styles.applied}>Applied</div>
@@ -191,7 +191,7 @@ const sendNotifications = async (members: any) => {
               </div>
             </div>
             <button className={styles.locationMarker}>
-            {!applied && <button className={styles.applyNow} onClick={handleApply}>Apply Now</button>}
+            {!applied && <div className={styles.applyNow} onClick={handleApply}>Apply Now</div>}
             {applied && <div className={styles.applied}>Applied</div>}
             </button>
           </div>

@@ -336,6 +336,7 @@
   align-self: stretch;
   flex-direction: row;
   justify-content: flex-end;
+  z-index: 4;
 }
 .emptyFrame,
 .registerFrame {
@@ -394,11 +395,11 @@
   font-family: inherit;
 }
 .icon {
-  height: 555.5px;
-  width: 732.1px;
+  height: 981.54px;
+  min-width: 100%;
+  max-width: 1916.17px;
   position: absolute;
-  margin: 0 !important;
-  right: -63.1px;
+  margin-left: -600px;
   bottom: 6.5px;
   object-fit: cover;
   z-index: 2;
@@ -415,11 +416,11 @@
 .jobSearchFrame {
   flex: 1;
   border-radius: var(--br-10xl);
-  background-color: var(--color-ghostwhite);
+  background-color: #FFDED6;
   padding: var(--padding-63xl) var(--padding-32xl);
   min-width: 428px;
   min-height: 825px;
-  max-width: 100%;
+  max-width: 868px;
   font-size: var(--font-size-18xl);
   color: var(--gray-02-100);
 }

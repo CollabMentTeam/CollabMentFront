@@ -689,6 +689,7 @@
   padding: 0 0 var(--padding-smi) var(--padding-xs);
   box-sizing: border-box;
   font-size: 73.7px;
+  margin-left: -200px;
 }
 .frameNode {
   width: 56px;
@@ -932,7 +933,7 @@
 @media screen and (max-width: 1920px) {
   .mainpage {
     max-width: 100%;
-    height: 8900px;
+    height: 100%;
   }
 }
 @media screen and (max-width: 1425px) {

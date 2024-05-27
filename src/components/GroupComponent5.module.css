@@ -1,0 +1,171 @@
+.frameChild {
+  width: 401.4px;
+  height: 245px;
+  position: relative;
+  border-radius: 20.99px;
+  background-color: var(--neutral-100);
+  display: none;
+  max-width: 100%;
+  z-index: 0;
+}
+.frameItem {
+  align-self: stretch;
+  width: 70.8px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-gainsboro-400);
+  z-index: 1;
+}
+.ayaGazizova,
+.employer {
+  position: relative;
+  line-height: 150%;
+  font-weight: 500;
+  z-index: 1;
+}
+.employer {
+  font-size: var(--font-size-base-9);
+  color: var(--color-dimgray-300);
+  display: inline-block;
+  min-width: 76px;
+}
+.ayaGazizovaParent {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-9xs-3);
+}
+.ayaGazizovaParent,
+.ellipseParent,
+.frameWrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.ellipseParent {
+  align-self: stretch;
+  height: 68.5px;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.frameWrapper {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-smi-4);
+  box-sizing: border-box;
+  min-width: 140px;
+}
+.frameInner {
+  height: 127px;
+  width: 122px;
+  position: relative;
+  object-fit: cover;
+  z-index: 2;
+}
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-14xl);
+}
+.ouimlCreateSingleMetricJoIcon {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.createAVacancy {
+  position: relative;
+  font-size: var(--font-size-lgi-8);
+  font-weight: 500;
+  font-family: var(--body-small-medium);
+  color: var(--neutral-100);
+  text-align: left;
+}
+.createAVacancyWrapper,
+.ouimlCreateSingleMetricJoParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs) 0 0;
+}
+.ouimlCreateSingleMetricJoParent {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-lgi) var(--padding-20xl) var(--padding-lg-3);
+  background-color: var(--color-lightsalmon);
+  width: 347px;
+  border-radius: var(--br-base);
+  overflow: hidden;
+  flex-direction: row;
+  box-sizing: border-box;
+  gap: var(--gap-10xl);
+  max-width: 100%;
+  z-index: 4;
+}
+
+.ouimlCreateSingleMetricJoParent:hover {
+  background-color: var(--color-gainsboro-400);
+}
+
+.icon {
+  width: 484.6px;
+  height: 390.2px;
+  position: absolute;
+  margin: 0 !important;
+  right: -204.2px;
+  bottom: -174.2px;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.rectangleParent {
+  width: 401.4px;
+  border-radius: 20.99px;
+  background-color: var(--neutral-100);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-12xs-4) var(--padding-14xl-1) var(--padding-11xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-base-6);
+  min-width: 401.40000000000146px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-xl-3);
+  color: var(--color-black1);
+  font-family: var(--body-small-medium);
+}
+@media screen and (max-width: 975px) {
+  .rectangleParent {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 700px) {
+  .rectangleParent {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .ayaGazizova {
+    font-size: var(--other-16-18-m-size);
+    line-height: 24px;
+  }
+  .frameInner {
+    flex: 1;
+  }
+  .frameParent {
+    gap: var(--gap-base);
+  }
+  .frameParent,
+  .ouimlCreateSingleMetricJoParent {
+    flex-wrap: wrap;
+  }
+}

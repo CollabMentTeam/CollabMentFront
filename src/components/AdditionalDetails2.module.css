@@ -1,0 +1,144 @@
+.additionalDetails1 {
+  position: relative;
+  line-height: 120%;
+  font-weight: 600;
+}
+.icon {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.additionalDetailsParent,
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.button {
+  width: 40px;
+  border-radius: var(--br-xs);
+  border: 1px solid var(--neutral-100);
+  box-sizing: border-box;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-4xs);
+}
+.additionalDetailsParent {
+  align-self: stretch;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  font-size: var(--display-2-size);
+}
+.icon1 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.email1,
+.gazizovaemailcom {
+  position: relative;
+  line-height: 26px;
+}
+.email1 {
+  font-weight: 600;
+  display: inline-block;
+  min-width: 42px;
+}
+.gazizovaemailcom {
+  white-space: nowrap;
+}
+.content,
+.email {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.email {
+  flex-direction: row;
+  gap: var(--gap-base);
+}
+.icon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.div,
+.phone {
+  position: relative;
+  line-height: 26px;
+}
+.phone {
+  font-weight: 600;
+  display: inline-block;
+  min-width: 50px;
+}
+.div {
+  white-space: nowrap;
+}
+.content1,
+.email2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.email2 {
+  flex-direction: row;
+  gap: var(--gap-base);
+}
+.icon3 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.languages {
+  font-weight: 500;
+  display: inline-block;
+  min-width: 85px;
+}
+.kazakhEnglishRussian,
+.languages {
+  position: relative;
+  line-height: 26px;
+}
+.additionalDetails,
+.content2,
+.email3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.additionalDetails,
+.email3 {
+  flex-direction: row;
+  gap: var(--gap-base);
+}
+.additionalDetails {
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  border-radius: var(--br-mini);
+  width: 352px;
+  flex-direction: column;
+  padding: var(--padding-5xl);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--other-16-18-m-size);
+  color: white;
+  font-family: var(--body-small-medium);
+}
+@media screen and (max-width: 450px) {
+  .additionalDetails1 {
+    font-size: var(--other-16-18-m-size);
+    line-height: 19px;
+  }
+}

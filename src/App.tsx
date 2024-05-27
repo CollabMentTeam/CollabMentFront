@@ -8,6 +8,7 @@ import {
 import MainPage from "./pages/MainPage";
 import ProfilePage from "./pages/ProfilePage";
 import Network from "./pages/Network";
+import NetworkV2 from "./pages/NetworkV2";
 import Notices from "./pages/Notices";
 import Feed from "./pages/Feed";
 import ProfilePageAbout from "./pages/ProfilePageAbout";
@@ -27,6 +28,9 @@ import AppVideo from "./AppVideo";
 import Jobs from "./pages/Jobs";
 import V from "./pages/V";
 import CreateJobForm from "./pages/createVacancy";
+import ProfilePageContainer from "./pages/ProfileAboutContainer";
+import TeamNew from "./pages/TeamNew";
+import DataHub from "./pages/DataHub";
 
 function App() {
   const action = useNavigationType();
@@ -129,10 +133,10 @@ function App() {
       <Route path="/" element={<MainPage />} />
       {/* <Route path="/profile" element={<ProfilePage />} /> */}
       <Route path="/profile/:username" element={<ProfilePage />} />
-      <Route path="/network" element={<Network />} />
+      <Route path="/network" element={<NetworkV2 />} />
       <Route path="/notices" element={<Notices />} />
       <Route path="/feed" element={<Feed />} />
-      <Route path="/profileAbout/:username" element={<ProfilePageAbout />} />
+      <Route path="/profileAbout/:username" element={<ProfilePageContainer />} />
       <Route path="/feedshort" element={<FeedShort />} />
       <Route
         path="/MyProfile"
@@ -156,9 +160,12 @@ function App() {
       {/* <Route path="/example-form" element={<ExampleForm />} /> */}
 
       <Route path="/vacancy" element={<V />} />
+      <Route path="/data-hub" element={<DataHub />} />
+
+      {/* <Route path="/teamNew" element={<TeamNew />} /> */}
 
       <Route path="/create-vacancy" element={<CreateJobForm />} />
-
+      {/* <Route path="/networkV2" element={<NetworkV2 />} /> */}
 
     </Routes>
   );

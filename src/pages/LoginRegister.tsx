@@ -4,10 +4,10 @@ import stylesAnimation from "../components/globalAnimations.module.css";
 import axios from "axios";
 import { Link, redirect  } from "react-router-dom";
 
-const API_URL = 'https://collabmentteam.pythonanywhere.com/api/login';
+const API_URL = 'http://127.0.0.1:8000/api/login';
 
 const LoginRegister: FunctionComponent = () => {
-
+  
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -121,7 +121,7 @@ const LoginRegister: FunctionComponent = () => {
                   {/* <div className={styles.password}></div> */}
                 </div>
               </div>
-              <div className={styles.forgotPassword}>Forgot Password</div>
+              {/* <div className={styles.forgotPassword}>Forgot Password</div> */}
             </div>
             <div className={styles.largeButton}>
               <button className={styles.buttonsoliddefaultlargemai} onClick={handleLogin}>
@@ -144,7 +144,7 @@ const LoginRegister: FunctionComponent = () => {
           className={styles.icon}
           loading="eager"
           alt=""
-          src="/02092401-1@2x.png"
+          src="/back1.png"
         />
       </div>
     </div>

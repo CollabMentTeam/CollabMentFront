@@ -1,0 +1,186 @@
+.managerPhotoRowOneChild {
+  height: 95px;
+  width: 365px;
+  position: relative;
+  border-radius: var(--br-base);
+  background-color: var(--color-whitesmoke-100);
+  display: none;
+  max-width: 100%;
+}
+.photoIcon {
+  height: 52px;
+  width: 52px;
+  position: relative;
+  border-radius: var(--br-7xl);
+  object-fit: cover;
+  z-index: 1;
+}
+.darleneBlack,
+.hrManager {
+  position: relative;
+  display: inline-block;
+  min-width: 95px;
+  z-index: 1;
+}
+.hrManager {
+  font-size: var(--font-size-3xs);
+  line-height: 150%;
+  min-width: 60px;
+}
+.managerNameRowOne,
+.managerNameRowOneWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.managerNameRowOne {
+  justify-content: flex-start;
+  gap: var(--gap-12xs);
+}
+.managerNameRowOneWrapper {
+  justify-content: flex-end;
+  color: black;
+  padding: 0 var(--padding-xs) var(--padding-6xs) 0;
+}
+.unsubscribe {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  font-family: var(--font-dm-sans);
+  color: var(--color-mediumslateblue);
+  text-align: left;
+  display: inline-block;
+  min-width: 84px;
+}
+.managerUnsubscribeRowOne {
+  cursor: pointer;
+  border: 1px solid var(--color-mediumslateblue);
+  padding: var(--padding-smi) var(--padding-4xl) var(--padding-xs)
+    var(--padding-9xl);
+  background-color: var(--color-white);
+  border-radius: 11.63px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 2;
+}
+.managerUnsubscribeRowOne:hover,
+.managerUnsubscribeRowTwo:hover {
+  background-color: var(--color-gainsboro-100);
+  border: 1px solid var(--color-royalblue);
+  box-sizing: border-box;
+}
+.managerPhotoRowOne,
+.managerPhotoRowTwoChild {
+  border-radius: var(--br-base);
+  background-color: var(--color-whitesmoke-100);
+  max-width: 100%;
+}
+.managerPhotoRowOne {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: var(--padding-2xl) var(--padding-lgi) var(--padding-3xl)
+    var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-mini);
+  z-index: 1;
+}
+.managerPhotoRowTwoChild {
+  height: 95px;
+  width: 365px;
+  position: relative;
+  display: none;
+}
+.photoIcon1 {
+  height: 52px;
+  width: 52px;
+  position: relative;
+  border-radius: var(--br-7xl);
+  object-fit: cover;
+  z-index: 1;
+}
+.darleneBlack1,
+.hrManager1 {
+  position: relative;
+  display: inline-block;
+  min-width: 95px;
+  z-index: 1;
+}
+.hrManager1 {
+  font-size: var(--font-size-3xs);
+  line-height: 150%;
+  min-width: 60px;
+}
+.managerNameListTwo,
+.managerNameRowTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.managerNameListTwo {
+  justify-content: flex-start;
+  gap: var(--gap-12xs);
+}
+.managerNameRowTwo {
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-6xs);
+}
+.photoParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.unsubscribe1 {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  font-family: var(--font-dm-sans);
+  color: var(--color-mediumslateblue);
+  text-align: left;
+  display: inline-block;
+  min-width: 84px;
+}
+.managerUnsubscribeRowTwo {
+  cursor: pointer;
+  border: 1px solid var(--color-mediumslateblue);
+  padding: var(--padding-smi) var(--padding-4xl) var(--padding-xs)
+    var(--padding-9xl);
+  background-color: var(--color-white);
+  border-radius: 11.63px;
+  overflow: hidden;
+  align-items: flex-start;
+  z-index: 2;
+}
+.managerPhotoGrid,
+.managerPhotoRowTwo,
+.managerUnsubscribeRowTwo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.managerPhotoRowTwo {
+  border-radius: var(--br-base);
+  background-color: var(--color-whitesmoke-100);
+  align-items: flex-end;
+  padding: var(--padding-2xl) var(--padding-lgi) var(--padding-3xl)
+    var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-8xl);
+  max-width: 100%;
+  z-index: 1;
+}
+.managerPhotoGrid {
+  width: 746px;
+  align-items: flex-start;
+  gap: var(--gap-base);
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-200);
+  font-family: var(--font-inter);
+}

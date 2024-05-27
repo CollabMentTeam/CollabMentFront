@@ -380,6 +380,7 @@
   align-self: stretch;
   flex-direction: row;
   justify-content: flex-end;
+  z-index: 2;
 }
 .registerFrame {
   width: 504px;
@@ -430,14 +431,13 @@
   font-family: inherit;
 }
 .icon {
-  height: 563px;
-  width: 739.9px;
+  height: 838px;
+  min-width: 130%;
   position: absolute;
-  margin: 0 !important;
-  right: -80.9px;
+  margin-left: -400px;
   bottom: -5px;
   object-fit: cover;
-  z-index: 2;
+  z-index: 1;
 }
 .imgParent,
 .loginRegister {
@@ -454,8 +454,8 @@
   background-color: var(--color-ghostwhite);
   padding: var(--padding-63xl) var(--padding-32xl);
   min-width: 428px;
+  max-width: 828px;
   min-height: 825px;
-  max-width: 100%;
   font-size: var(--font-size-18xl);
   color: var(--gray-02-100);
 }

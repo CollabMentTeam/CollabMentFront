@@ -31,7 +31,7 @@ const Url = 'https://collabmentteam.pythonanywhere.com/';
 const userData = JSON.parse(localStorage.getItem('userData') || '{}');
 
 const apiKey = '233vmgucsgte';
-
+const userCustomId = localStorage.getItem('userId');
 const sort: ChannelSort = { last_message_at: -1 };
 const filters: ChannelFilters = {
   type: 'messaging',

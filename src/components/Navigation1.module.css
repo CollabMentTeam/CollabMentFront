@@ -848,6 +848,7 @@
   padding: 0 var(--padding-21xl) 0 var(--padding-8xl);
   box-sizing: border-box;
   position: relative;
+
 }
 .navigation {
   align-self: stretch;
@@ -858,7 +859,7 @@
   font-size: var(--font-size-xs);
   color: var(--color-gray-100);
   font-family: var(--body-small-medium);
-  background-color: white;
+  background-color: white !important;
 }
 
 .modalOverlay {
@@ -869,13 +870,13 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items:flex-start;
   z-index: 10;
 }
 
 .modalContent {
-  background-color: white;
+  /* background-color: white; */
   padding: 20px;
   border-radius: 8px;
   animation: modalFadeIn 0.3s ease-out;

@@ -156,7 +156,7 @@ const LoginRegister1: FunctionComponent = () => {
           className={styles.icon}
           loading="eager"
           alt=""
-          src="/104092401-1@2x.png"
+          src="/back2.png"
         />
       </div>
     </div>

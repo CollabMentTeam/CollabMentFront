@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import styles from "./GroupComponent.module.css";
+import styles from "./GroupComponent1-1.module.css";
 
 const GroupComponent: FunctionComponent = () => {
   return (

@@ -34,12 +34,12 @@ const FrameComponent2: FunctionComponent = () => {
           <Link className={stylesAnimation.NavLinkSettings} to="/dash-personal">
           <div className={styles.personalInformation}>Personal information</div>
           </Link>
-          <Link className={stylesAnimation.NavLinkSettings} to="/login-details">
+          {/* <Link className={stylesAnimation.NavLinkSettings} to="/login-details">
 
           <div className={styles.tabMenu1}>
             <div className={styles.loginDetails}>Login Details</div>
           </div>
-          </Link>
+          </Link> */}
           <div className={styles.tabMenu2}>
             <div className={styles.caption1}>Notifications</div>
           </div>

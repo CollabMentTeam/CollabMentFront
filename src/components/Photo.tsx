@@ -58,7 +58,7 @@ const sendNotifications = async (members: any) => {
           body: JSON.stringify({
               usernames: members,
               message: 'New subscribe! from ' + viewerUsername,
-              link : '/video'
+              link : ''
           }),
       });
       if (!response.ok) {

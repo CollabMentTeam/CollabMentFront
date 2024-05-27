@@ -4,6 +4,7 @@ import Navigation1 from "../components/Navigation1";
 import { Link } from "react-router-dom";
 import styles from "./Team.module.css";
 import axios from "axios";
+import TeamSection from "../components/TeamSection";
 
 interface selectedTeam {
     creator_last_login_date: any;
@@ -22,7 +23,7 @@ const Team: FunctionComponent = () => {
         // Функция для получения списка команд из API
         const fetchTeams = async () => {
             try {
-                const response = await axios.get('https://collabmentteam.pythonanywhere.com/api/teams/list/');
+                const response = await axios.get('http://127.0.0.1:8000/api/teams/list/');
                 setTeams(response.data);
                 console.log(response.data);
             } catch (error) {
@@ -60,7 +61,12 @@ const Team: FunctionComponent = () => {
     return (
         <>
             <Navigation1 />
-            <div className={styles.containerForCreate}>
+            <div style={{paddingTop: "80px", paddingBottom: "80px" , alignContent: "center", alignItems: "center", justifyContent: "center", display: "flex", backgroundColor: "#F6F6F6"}}>
+            { teams &&  <TeamSection teams={teams}
+                handleModal={openModal}
+            />}
+            </div>
+            {/* <div className={styles.containerForCreate}>
             <button className={styles.createBtn} onClick={() => window.location.href = "/createTeam"}> Create Team </button>
             </div>
             <div className={styles.containerForTeamFull}>
@@ -75,7 +81,7 @@ const Team: FunctionComponent = () => {
                     </div>
                 ))}
             </div>
-            </div>
+            </div> */}
             
             <Footer3 />
             {selectedTeam && (

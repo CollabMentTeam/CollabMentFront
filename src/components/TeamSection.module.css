@@ -1,0 +1,286 @@
+.frameChild {
+  width: 781px;
+  height: 245px;
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-mediumslateblue);
+  display: none;
+  max-width: 100%;
+}
+
+.createYourPerfect,
+.findYourTeam {
+  margin: 0;
+  position: relative;
+  line-height: 150%;
+  font-family: inherit;
+  z-index: 1;
+}
+.findYourTeam {
+  align-self: stretch;
+  font-size: inherit;
+  font-weight: 700;
+  color: white;
+}
+.createYourPerfect {
+  width: 673.7px;
+  font-size: var(--display-2-size);
+  font-weight: 400;
+  display: inline-block;
+  max-width: 100%;
+  color: white;
+}
+.joinTeamButton,
+.joinTeamButtonWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.joinTeamButton {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-12xs);
+}
+.joinTeamButtonWrapper {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 0 var(--padding-9xs-1);
+  box-sizing: border-box;
+}
+.ouimlCreateSingleMetricJoIcon {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.createATeam {
+  position: relative;
+  font-size: var(--font-size-lgi-8);
+  font-weight: 500;
+  font-family: var(--body-small-medium);
+  color: var(--color-mediumslateblue);
+  text-align: left;
+}
+.teamCreator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs) 0 0;
+}
+.ouimlCreateSingleMetricJoParent,
+.rectangleParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.ouimlCreateSingleMetricJoParent {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-lgi) var(--padding-20xl) var(--padding-lg-3);
+  background-color: var(--neutral-100);
+  width: 347px;
+  border-radius: var(--br-base);
+  overflow: hidden;
+  flex-direction: row;
+  gap: var(--gap-10xl);
+  z-index: 2;
+}
+.ouimlCreateSingleMetricJoParent:hover {
+  background-color: var(--color-dodgerblue-100);
+}
+
+.rectangleParent {
+  flex: 1;
+  border-radius: var(--br-xl);
+  background-color: var(--color-mediumslateblue);
+  flex-direction: column;
+  padding: var(--padding-21xl) var(--padding-smi-4) var(--padding-6xl-7)
+    var(--padding-13xl);
+  gap: var(--gap-15xl);
+  min-width: 508px;
+}
+.frameItem {
+  height: 245px;
+  width: 373px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-lightsalmon);
+  display: none;
+}
+.createYourTeam,
+.frameItem,
+.icon {
+  position: relative;
+  max-width: 100%;
+}
+.icon {
+  height: 224px;
+  width: 373px;
+  object-fit: cover;
+  display: none;
+}
+.createYourTeam {
+  margin: 0;
+  flex: 1;
+  font-size: inherit;
+  line-height: 150%;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 2;
+  color: white;
+}
+.findJobsButton {
+  flex: 1;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-6xs) var(--padding-lg) 127px var(--padding-10xl);
+  background-image: url(/public/1713351244373-1@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 100%;
+  z-index: 1;
+}
+.findJobsButton,
+.frameParent,
+.rectangleGroup {
+  display: flex;
+  box-sizing: border-box;
+}
+.rectangleGroup {
+  width: 373px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-lightsalmon);
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xl) 0 0;
+  min-width: 373px;
+  max-width: 100%;
+}
+.frameParent {
+  align-self: stretch;
+  padding: 0 0 0 var(--padding-12xs);
+  gap: var(--gap-4xl);
+}
+.frameContainer,
+.frameGroup,
+.frameParent,
+.jobSearchBox {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frameGroup {
+  flex: 1;
+  display: grid;
+  gap: var(--gap-lgi);
+  grid-template-columns: repeat(3, minmax(287px, 1fr));
+}
+.frameContainer,
+.jobSearchBox {
+  align-self: stretch;
+  box-sizing: border-box;
+}
+.jobSearchBox {
+  display: flex;
+  padding: 0 0 0 var(--padding-10xs);
+}
+.frameContainer {
+  display: grid;
+  padding: 0 var(--padding-10xs) 0 0;
+  gap: var(--gap-lgi);
+  grid-template-columns: repeat(3, minmax(287px, 1fr));
+}
+.jobSearchBoxParent,
+.teamsection {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.jobSearchBoxParent {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: var(--gap-9xl);
+}
+.teamsection {
+  width: 1178px;
+  align-items: flex-end;
+  gap: var(--gap-57xl);
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-11xl);
+  color: var(--neutral-100);
+  font-family: var(--body-small-medium);
+}
+@media screen and (max-width: 950px) {
+  .findYourTeam {
+    font-size: var(--font-size-5xl);
+    line-height: 36px;
+  }
+  .joinTeamButton {
+    flex: 1;
+  }
+  .createYourTeam {
+    font-size: var(--font-size-5xl);
+    line-height: 36px;
+  }
+  .rectangleGroup {
+    flex: 1;
+  }
+  .frameParent {
+    flex-wrap: wrap;
+  }
+  .frameContainer,
+  .frameGroup {
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(287px, 498px));
+  }
+}
+@media screen and (max-width: 700px) {
+  .rectangleParent {
+    min-width: 100%;
+  }
+  .frameContainer,
+  .frameGroup {
+    grid-template-columns: minmax(287px, 1fr);
+  }
+  .teamsection {
+    gap: var(--gap-19xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .findYourTeam {
+    font-size: var(--body-large-semibold-size);
+    line-height: 27px;
+  }
+  .createYourPerfect {
+    font-size: var(--other-16-18-m-size);
+    line-height: 24px;
+  }
+  .ouimlCreateSingleMetricJoParent {
+    flex-wrap: wrap;
+  }
+  .rectangleParent {
+    gap: var(--gap-mid);
+  }
+  .createYourTeam {
+    font-size: var(--body-large-semibold-size);
+    line-height: 27px;
+  }
+  .rectangleGroup {
+    min-width: 100%;
+  }
+  .teamsection {
+    gap: var(--gap-lgi);
+  }
+}
