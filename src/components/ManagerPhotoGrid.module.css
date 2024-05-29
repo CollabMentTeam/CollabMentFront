@@ -80,7 +80,6 @@
 }
 .managerPhotoRowOne {
   display: flex;
-  flex-direction: row;
   align-items: flex-end;
   justify-content: flex-start;
   padding: var(--padding-2xl) var(--padding-lgi) var(--padding-3xl)
@@ -178,6 +177,8 @@
 .managerPhotoGrid {
   width: 746px;
   align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
   gap: var(--gap-base);
   text-align: left;
   font-size: var(--font-size-sm);

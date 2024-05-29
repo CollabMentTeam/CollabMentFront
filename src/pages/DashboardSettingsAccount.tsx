@@ -19,6 +19,9 @@ interface UserData {
   birthday: string;
   gender: string;
   user_type: string;
+  telegram: string;
+  instagram: string;
+  website: string;
 }
 
 interface ProfileData {
@@ -37,6 +40,9 @@ const DashboardSettingsAccount: FunctionComponent = () => {
   const [birthday, setBirthday] = useState('');
   const [gender, setGender] = useState('');
   const [user_type, setUser_type] = useState('');
+  const [instagram, setInstagram] = useState('');
+  const [telegram, setTelegram] = useState('');
+  const [website, setWebsite] = useState('');
 
   const [selectedImageName, setSelectedImageName] = useState('');
   const [selectedImage, setSelectedImage] = useState(null);
@@ -99,6 +105,15 @@ const DashboardSettingsAccount: FunctionComponent = () => {
       if (userData.user_type) {
         formData.append('user_type', userData.user_type);
       }
+      if (instagram) {
+        formData.append('instagram', instagram);
+      }
+      if (telegram) {
+        formData.append('telegram', telegram);
+      }
+      if (website) {
+        formData.append('website', website);
+      }
 
       console.log(formData);
 
@@ -129,6 +144,18 @@ const DashboardSettingsAccount: FunctionComponent = () => {
 
   const handlePhoneNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPhoneNumber(event.target.value);
+  };
+
+  const handleInstagramChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInstagram(event.target.value);
+  };
+
+  const handleTelegramChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTelegram(event.target.value);
+  };
+
+  const handleWebsiteChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setWebsite(event.target.value);
   };
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -395,6 +422,46 @@ const getProfileData = async (username: any) => {
                       {/* <div className={styles.female}>Female</div>
                       <img className={styles.icon2} alt="" src="/icon-52.svg" /> */}
                     
+                  </div>
+                  
+                </div>
+                <div className={styles.textfield1}>
+                  <div className={styles.fullNameContainer}>
+                    <span>{`Telegram `}</span>
+                  </div>
+                  <div className={styles.input}>
+                    <input
+                      className={styles.ayaGazizova}
+                      placeholder={userDataLocal.telegram}
+                      type="text" 
+                      onChange={handleTelegramChange}
+                      />
+                  </div>
+                </div>
+                <div className={styles.textfield1}>
+                  <div className={styles.fullNameContainer}>
+                    <span>{`Instagram `}</span>
+                  </div>
+                  <div className={styles.input}>
+                    <input
+                      className={styles.ayaGazizova}
+                      placeholder={userDataLocal.instagram}
+                      type="text" 
+                      onChange={handleInstagramChange}
+                      />
+                  </div>
+                </div>
+                <div className={styles.textfield1}>
+                  <div className={styles.fullNameContainer}>
+                    <span>{`Website `}</span>
+                  </div>
+                  <div className={styles.input}>
+                    <input
+                      className={styles.ayaGazizova}
+                      placeholder={userDataLocal.website}
+                      type="text" 
+                      onChange={handleWebsiteChange}
+                      />
                   </div>
                 </div>
               </div>

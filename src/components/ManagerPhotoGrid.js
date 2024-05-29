@@ -1,6 +1,6 @@
 import styles from "./ManagerPhotoGrid.module.css";
 
-const ManagerPhotoGrid = ({ className = "", friend}) => {
+const ManagerPhotoGrid = ({ className = "", friend , removeFriend}) => {
 
   console.log(friend);
   
@@ -23,7 +23,7 @@ const ManagerPhotoGrid = ({ className = "", friend}) => {
             <div className={styles.hrManager}>{friend.email}</div>
           </div>
         </div>
-        <button className={styles.managerUnsubscribeRowOne}>
+        <button className={styles.managerUnsubscribeRowOne} onClick={() => removeFriend(friend.username)}>
           <div className={styles.unsubscribe}>Unsubscribe</div>
         </button>
       </div>

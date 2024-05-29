@@ -2,7 +2,7 @@ import ManagerPhotoGrid from "./ManagerPhotoGrid";
 import PropTypes from "prop-types";
 import styles from "./ManagerProfile.module.css";
 
-const ManagerProfile = ({ className = "" , friends }) => {
+const ManagerProfile = ({ className = "" , friends , removeFriend }) => {
   return (
     <div className={[styles.managerProfile, className].join(" ")}>
       <div className={styles.managerProfileChild} />
@@ -13,7 +13,7 @@ const ManagerProfile = ({ className = "" , friends }) => {
         </button>
       </div>
       {friends.map(friend => (
-      <ManagerPhotoGrid key={friend.id} friend={friend} />
+      <ManagerPhotoGrid key={friend.id} friend={friend} removeFriend={removeFriend} />
     ))}
 
     </div>

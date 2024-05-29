@@ -7,6 +7,7 @@
   display: none;
   max-width: 100%;
 }
+
 .recommendationHeaderChild {
   height: 50px;
   width: 240px;
@@ -439,13 +440,13 @@
   padding: 0 var(--padding-8xs) 0 var(--padding-11xs);
 }
 .recommendationItem {
-  width: 457px;
+  width: 857px;
   border-radius: var(--br-xl);
   background-color: var(--color-white);
   flex-direction: column;
   padding: var(--padding-21xl) var(--padding-mini) var(--padding-5xl);
   gap: var(--gap-8xl);
-  min-width: 457px;
+  min-width: 857px;
   text-align: left;
   font-size: var(--font-size-sm);
   color: var(--color-gray-200);
@@ -475,5 +476,39 @@
   }
   .leadPhotoGrid2 {
     flex-wrap: wrap;
+  }
+}
+
+
+.leadProfile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: var(--gap-30xl); 
+  width: 100%;
+}
+
+.leadPhotoGrid {
+  display: flex;
+  align-items: self-start;
+  height: 95px;
+  padding: var(--padding-xl);
+  box-sizing: border-box;
+  border-radius: var(--br-base);
+  background-color: var(--color-whitesmoke-100);
+  max-width: 100%;
+}
+
+.photoIcon {
+  border-radius: var(--br-7xl);
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 52px; 
+  max-height: 52px;
+}
+
+@media screen and (max-width: 800px) {
+  .leadProfile {
+    grid-template-columns: 1fr;
   }
 }

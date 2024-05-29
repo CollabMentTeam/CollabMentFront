@@ -45,27 +45,44 @@ const Network = () => {
       });
       sendNotifications([friendUsername]);
       alert('User added to friends!');
+      window.location.reload();
     } catch (error) {
       console.error('Error adding friend:', error);
     }
   };
 
+  const removeFriend = async (friendUsername) => {
+    try {
+      await axios.post('https://collabmentteam.pythonanywhere.com/api/friend/remove/', {
+        friend_username: friendUsername,
+        username: viewerUsername
+      });
+      alert('User removed from friends!');
+      setFriends(friends.filter(friend => friend.username !== friendUsername));
+    } catch (error) {
+      console.error('Error removing friend:', error);
+    }
+  };
+
   const sendNotifications = async (members) => {
     try {
-      await fetch('https://collabmentteam.pythonanywhere.com/api/create-notification/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          usernames: members,
-          message: `New friend request from ${viewerUsername}`,
-          link: ''
-        }),
-      });
-      console.log('Notifications sent successfully');
+        const response = await fetch('https://collabmentteam.pythonanywhere.com/api/create-notification/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                usernames: members,
+                message: 'New Subscription from' + viewerUsername,
+                link : '/network',
+            }),
+        });
+        if (!response.ok) {
+            throw new Error('Ошибка при отправке уведомления');
+        }
+        console.log('Уведомления отправлены успешно');
     } catch (error) {
-      console.error('Error sending notification:', error);
+        console.error('Ошибка:', error);
     }
   };
 
@@ -81,7 +98,7 @@ const Network = () => {
             <RecommendationItem users={users} addFriend={addFriend} />
           )}
           <div className={styles.memberProfile}>
-            <ManagerProfile friends={friends} />
+            <ManagerProfile friends={friends} removeFriend={removeFriend} />
           </div>
         </section>
       </div>

@@ -13,36 +13,33 @@ const RecommendationItem = ({ className = "" ,  users, addFriend }) => {
       </button>
       <div className={styles.teamMember}>
         <div className={styles.leadProfile}>
-
-        {users.map(user => (
-
-          <div className={styles.leadPhotoGrid} key={user.id}>
-            <div className={styles.leadPhotoGridChild} />
-            <div className={styles.leadPhotoRowOne}>
-              <div className={styles.leadPhotoPairOne}>
-              {user && user.profile && user.profile.profile_photo && (
-
-                <img
-                  className={styles.photoIcon}
-                  loading="lazy"
-                  alt=""
-                  src={`https://collabmentteam.pythonanywhere.com/` + user.profile.profile_photo}
-                />
-
-              )}
-                <div className={styles.leadPhotoPairTwo}>
-                  <div className={styles.audreyAlexanderParent}>
-                    <b className={styles.audreyAlexander}>{user.first_name} {user.last_name}</b>
-                    <div className={styles.teamLeadAt}>{user.email}</div>
+          
+          {users.map(user => (
+            <div className={styles.leadPhotoGrid} key={user.id}>
+              <div className={styles.leadPhotoGridChild} />
+              <div className={styles.leadPhotoRowOne}>
+                <div className={styles.leadPhotoPairOne}>
+                  {user && user.profile && user.profile.profile_photo && (
+                    <img
+                      className={styles.photoIcon}
+                      loading="lazy"
+                      alt=""
+                      src={`https://collabmentteam.pythonanywhere.com/` + user.profile.profile_photo}
+                    />
+                  )}
+                  <div className={styles.leadPhotoPairTwo}>
+                    <div className={styles.audreyAlexanderParent}>
+                      <b className={styles.audreyAlexander}>{user.first_name} {user.last_name}</b>
+                      <div className={styles.teamLeadAt}>{user.email}</div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <button className={styles.leadSubscribeButtons} onClick={() => addFriend(user.username)}>
+                <div className={styles.subscribe}>Subscribe</div>
+              </button>
             </div>
-            <button className={styles.leadSubscribeButtons} onClick={() => addFriend(user.username)} >
-              <div className={styles.subscribe}>Subscribe</div>
-            </button>
-          </div>
-                ))}
+          ))}
 
 
           
