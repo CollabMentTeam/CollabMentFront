@@ -368,54 +368,10 @@ if (!userData) {
         
         <PostList posts={posts} widthSize="68%"/>
 
-        
-        <PostList posts={posts} widthSize="68%"/>
-
       </div>
     </section>
   );
 };
-
-
-interface ProfileData {
-  professional_field: string;
-  education: string;
-  current_job: string;
-  experience: string;
-  location: string;
-  personal_qualities: string;
-  certificates: string;
-  resume: string;
-  profile_photo: string;
-  education_date: string;
-  name_institution: string;
-  desired_position: string;
-  type_of_work: string;
-  operating_mode: string;
-  name_organization: string;
-  position: string;
-  experience_name: string;
-  citizenship: string;
-  city: string;
-  passage_time: string;
-  user: User;
-}
-
-interface User {
-  id: number;
-  username: string;
-  email: string;
-  phone_number: string;
-  friends: Friends[];
-}
-
-interface Friends {
-  id: number;
-  username: string;
-  email: string;
-  phone_number: string;
-  friends: string[];
-}
 
 
 interface ProfileData {
