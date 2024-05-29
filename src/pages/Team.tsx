@@ -86,18 +86,19 @@ const Team: FunctionComponent = () => {
             <Footer3 />
             {selectedTeam && (
                 <div className={styles.modalOverlay} onClick={handleModalClick}>
-                    <div className={styles.modal} ref={modalRef}>
-                        <button className={styles.closeButton} onClick={closeModal}>Закрыть</button>
-                        <h2>{selectedTeam?.name}</h2>
-                        <p>{selectedTeam?.description}</p>
-                        {selectedTeam?.creator_last_login_date ? (
-                            <button className={styles.contactButton} onClick={() => getTeamsId(selectedTeam)}>Связаться</button>
-                        ) : (
-                            <p>Создатель команды сегодня не в сети</p>
-                        )}
+                    <div className={styles.modal} ref={modalRef} onClick={(e) => e.stopPropagation()}>
+                    <button className={styles.closeButton} onClick={closeModal}>X</button>
+                    <h2 style={{textAlign: "center", fontSize: "24px"}}>{selectedTeam?.name}</h2>
+                    <p>{selectedTeam?.description}</p>
+                    {selectedTeam?.creator_last_login_date ? (
+                        <button className={styles.contactButton} onClick={() => getTeamsId(selectedTeam)}>Contact</button>
+                    ) : (
+                        <p>Создатель команды сегодня не в сети</p>
+                    )}
                     </div>
                 </div>
-            )}
+                )}
+
         </>
     );
 };
