@@ -29,7 +29,7 @@ const UserSelectionModal: React.FC<UserSelectionModalProps> = ({ onClose, onCrea
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get<User[]>(`${API_URL}/api/all_users`);
+        const response = await axios.get<User[]>(`${API_URL}/api/all_users/`);
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching users:', error);
