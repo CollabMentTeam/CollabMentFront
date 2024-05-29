@@ -198,16 +198,19 @@ if (!userData) {
                         <div className={styles.footerNavigationRectangleSe}>
                           <h3 className={styles.following}>
                             <span>
-                              <b>{userPofileData?.user.friends.length}</b>
                             </span>
                             <span className={styles.following1}>
-                              <span>{` `}</span>
+                            <span>
+                            {userPofileData && userPofileData?.user.friends && userPofileData?.user.friends.length && (   
+                            <b>{userPofileData?.user.friends.length}</b>
+                            )}
+                            </span>
                               <span>Subscribers</span>
                             </span>
                           </h3>
                           <h3 className={styles.followers}>
                             <span>
-                              {/* <b>0</b> */}
+                            
                             </span>
                             <span className={styles.followers1}>
                               <span>{` `}</span>

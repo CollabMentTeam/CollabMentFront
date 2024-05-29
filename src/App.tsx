@@ -136,7 +136,6 @@ function App() {
       <Route path="/notices" element={<Notices />} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/profileAbout/:username" element={<ProfilePageContainer />} />
-      <Route path="/profileAbout/:username" element={<ProfilePageContainer />} />
       <Route path="/feedshort" element={<FeedShort />} />
       <Route
         path="/MyProfile"

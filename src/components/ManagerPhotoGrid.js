@@ -9,7 +9,7 @@ const ManagerPhotoGrid = ({ className = "", friend}) => {
       <div className={styles.managerPhotoRowOne}>
         <div className={styles.managerPhotoRowOneChild} />
 
-        {friend && friend.profile && (
+        {friend && friend.profile && friend.profile.profile_photo && (
                 <img
                     className={styles.photoIcon}
                     alt={`${friend.username}'s profile`}

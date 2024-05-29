@@ -20,7 +20,7 @@ const RecommendationItem = ({ className = "" ,  users, addFriend }) => {
             <div className={styles.leadPhotoGridChild} />
             <div className={styles.leadPhotoRowOne}>
               <div className={styles.leadPhotoPairOne}>
-              {user && user.profile && (
+              {user && user.profile && user.profile.profile_photo && (
 
                 <img
                   className={styles.photoIcon}
