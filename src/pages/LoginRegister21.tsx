@@ -70,7 +70,7 @@ const LoginRegister21: FunctionComponent = () => {
         // },
       });
       console.log('Team created successfully:', response.data);
-      // Дополнительная логика после успешного создания команды...
+      window.location.href = '/teams';
     } catch (error) {
       console.error('Error creating team:', error);
     }
